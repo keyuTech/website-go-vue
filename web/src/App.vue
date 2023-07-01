@@ -1,19 +1,19 @@
-<script setup lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
-</script>
-
 <template>
-  <div>
-    <h1 class="text-3xl">111111</h1>
-    <HelloWorld msg="2222" />
-  </div>
+  <a-layout class="layout">
+    <a-layout-header> <AppHeader /></a-layout-header>
+    <a-layout-content class="px-24 flex-1">
+      <h1 class="text-3xl">111111</h1>
+      <h1>{{ t("message.hello") }}</h1>
+    </a-layout-content>
+    <a-layout-footer class="text-center">
+      ©2023 Created by Keyu.Wang. All rights reserved.
+    </a-layout-footer>
+  </a-layout>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-</style>
+<script setup lang="ts">
+import { useI18n } from "vue-i18n";
+import AppHeader from "@/components/header/index.vue";
+
+const { t } = useI18n({ useScope: "global" });
+</script>
