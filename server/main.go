@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -12,7 +11,8 @@ import (
 func main() {
 	// 读取配置文件
 	core.InitServer()
-	fmt.Println(global.Config)
+	// 连接数据库
+	global.DB = core.InitGorm()
 
 	r := gin.Default()
 	r.GET("/ping", func(c *gin.Context) {

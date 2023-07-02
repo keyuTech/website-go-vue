@@ -1,7 +1,11 @@
 package global
 
-import "keyu.tech/website/config"
+import (
+	"gorm.io/gorm"
+	"keyu.tech/website/config"
+)
 
 var (
 	Config *config.Config
+	DB     *gorm.DB
 )
