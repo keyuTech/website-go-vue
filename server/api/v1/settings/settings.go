@@ -1,9 +1,14 @@
 package settings
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+	"keyu.tech/website/models/common/response"
+)
 
 type SettingsApi struct{}
 
 func (SettingsApi) SettingsInfoView(c *gin.Context) {
-	c.JSON(200, gin.H{"msg": "xxx"})
+	response.OKWithData(map[string]string{
+		"id": "aaaa",
+	}, c)
 }
