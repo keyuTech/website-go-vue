@@ -16,6 +16,11 @@ const routes = [
     component: () => import("@/pages/blog/index.vue"),
   },
   {
+    path: "/admin",
+    name: "admin",
+    component: () => import("@/pages/admin/index.vue"),
+  },
+  {
     path: "/:catchAll(.*)",
     meta: {
       closeTab: true,

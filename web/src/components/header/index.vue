@@ -11,7 +11,6 @@
       <a-button
         type="link"
         href="https://www.keyu.wang/seele-ui/#/"
-        class="mr-8"
         target="_black"
         >SEELE-UI</a-button
       >
