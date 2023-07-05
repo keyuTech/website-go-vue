@@ -1,7 +1,7 @@
-mysql:
-  host: 127.0.0.1
-  port: 3306
-  db: website
+postgresql:
+  host: localhost
+  port: 5432
+  db: website_dev
   user: root
   password: 926453
   log-level: dev

@@ -2,7 +2,7 @@ package config
 
 import "strconv"
 
-type MySQL struct {
+type PostgreSQL struct {
 	Host     string `yaml:"host"`
 	Port     int    `yaml:"port"`
 	Config   string `yaml:"config"`
@@ -12,6 +12,6 @@ type MySQL struct {
 	LogLevel string `yaml:"log-level"`
 }
 
-func (m *MySQL) Dsn() string {
-	return m.User + ":" + m.Password + "@tcp(" + m.Host + ":" + strconv.Itoa(m.Port) + ")/" + m.DB + "?" + m.Config
+func (p *PostgreSQL) Dsn() string {
+	return "host=" + p.Host + " user=" + p.User + " password=" + p.Password + " dbname=" + p.DB + " port=" + strconv.Itoa(p.Port) + " sslmode=disable"
 }
